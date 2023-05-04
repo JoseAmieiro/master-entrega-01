@@ -1,0 +1,13 @@
+.grid-container-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(2, 200px);
+  
+    .item:nth-child(1) {
+      background-color: lighten($color: $grid-item-base-color, $amount: 0%);
+    }
+  
+    .item:nth-child(2) {
+      background-color: darken($color: $grid-item-base-color, $amount: 50%);
+    }
+}
