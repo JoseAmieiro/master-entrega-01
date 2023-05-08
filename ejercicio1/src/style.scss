@@ -1,13 +1,46 @@
-.grid-container-1 {
-    display: grid;
-    grid-template-columns: repeat(4, 200px);
-    grid-template-rows: repeat(2, 200px);
+@use "base" as *;
+
+body {
+  padding: 15px;
+  margin: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 100%;
+  font-weight: bold;
+  color: white;
+}
+.container-1 {
+  display: grid;
+  height: 90vh;
+  grid-template-columns: repeat(auto-fill, 80px);
+  grid-template-rows: 120px;
+  grid-column-gap: 1px;
+  grid-auto-rows: 120px;
+  align-content: start;
+  justify-content: space-around;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
   
-    .item:nth-child(1) {
-      background-color: lighten($color: $grid-item-base-color, $amount: 0%);
-    }
+}
+
+$iterations: 4;
+
+.box {
+  &.base-color {
+    background-color: $base-color;
+  }
   
-    .item:nth-child(2) {
-      background-color: darken($color: $grid-item-base-color, $amount: 50%);
+  @for $i from 1 through $iterations {
+    &.darken-#{$i} {
+      background-color: darken($base-color, $amount: $i * 10%);
     }
+    
+    &.lighten-#{$i} {
+      background-color: lighten($base-color, $amount: $i * 10%);
+    }
+  }
 }

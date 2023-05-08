@@ -1,0 +1,46 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.container-lemon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.container-bar-nav {
+  display: flex;
+  background-color: rgb(71, 157, 179);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%
+}
+
+.container-bar {
+  padding: 10px;
+  flex-grow: 1;
+  
+  text-align: center;
+  color: aliceblue;
+}
+
+.container-bar:hover {
+  background-color: rgb(22, 91, 108);
+}
+
+.container-bar span {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .container-bar-nav {
+    flex-direction: column;
+  }
+  .container-bar:hover {
+    width: 100%;
+  }
+}

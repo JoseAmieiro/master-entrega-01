@@ -1,0 +1,51 @@
+@use "base1" as *;
+
+
+body {
+    margin-top: 100px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1, 300px;
+    grid-template-rows: repeat(6, 100px);
+    justify-content: center;
+    align-content: center;
+    row-gap: 5px;
+    font-family: $principal-font-family;
+}
+.container div {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.base {
+    border: 1px solid black;
+    border-radius: $border-radius;
+    background-color: $primary-color;
+}
+
+.important {
+    border: 1px solid black;
+    border-radius: $border-radius;
+    background-color: darken($primary-color, $amount: 30%);
+}
+.warning {
+    border: 1px solid black;
+    border-radius: $border-radius;
+    background-color: lighten($primary-color, $amount: 30%);
+}
+.principal-font {
+
+}
+.secondary-font {
+    font-family: $secondary-font-family;
+}
+.box {
+    border: 1px solid black;
+    border-radius: $border-radius;
+    box-shadow: $shadow-box;
+}
