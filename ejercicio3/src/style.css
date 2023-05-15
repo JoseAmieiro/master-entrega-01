@@ -41,6 +41,6 @@ body {
     flex-direction: column;
   }
   .container-bar:hover {
-    width: 100%;
+    width: 90%;
   }
 }
